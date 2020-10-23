@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+		<link rel="stylesheet" href="./index.css">
+		<style>
+			@media (max-width:450px){
+				main{
+					width:auto;
+					height:auto;
+					padding:0;
+					margin:0;
+				}
+			}
+		</style>
+		<title>图表配置</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h3>图标容器</h3>
+				<ul>
+					<li>Highcharts 实例化中绑定容器的方式有很多种方式</li>
+					<li>通过构造函数:var chart = Highcharts.chart('container', {})</li>
+					<li>通过chart.renderTo来指定，var chart = Hightcharts.chart({chart:{rendTo:'container'}})</li>
+					<li>如果你的页面已经引入了jQuery，那么可以使用jQuery插件的形式调用：$('#container').highcharts({// Highcharts配置})</li>
+				</ul>
+			</section>
+			<section>
+				<h3>图表样式</h3>
+				<ul>
+					<li>边框：包括borderColor，borderRadius，borderWidth</li>
+					<li>背景：包括backgroundColor</li>
+					<li>外边距：包括margin，marginTop、marginRight、marginBottom、marginLeft</li>
+					<li>内边距：包括 spacing、spacingTop、spacingRight、spacingBottom、spacingLeft</li>
+					<li>style:其他样式：其他属性例如字体等属性，实例代码</li>
+					<li>
+						<pre>
+							chart: {
+							    style: {
+							        fontFamily: "",
+							        fontSize: '12px',
+							        fontWeight: 'bold',
+							        color: '#006cee'
+							    }
+							}
+						</pre>
+					</li>
+					<li>另外还可以通过 chart.className 来绑定 CSS 类并给定 CSS 样式。</li>
+					<li>图表绘图区的可配置属性有：plotBackgroundColor ： 绘图区背景颜色;plotBackgroundImage ： 绘图区背景图片;plotBorderColor ： 绘图区边框颜色;plotBorderWidth ： 绘图区边框宽度;plotShadow ： 绘图投影</li>
+				</ul>
+			</section>
+			<section>
+				<h3>事件</h3>
+				<ul>
+					<li>click ：图表点击事件</li>
+					<li>load ：图表加载完后事件</li>
+					<li>addSeries ：图表增加序列事件</li>
+					<li>drilldown ：图表下钻事件</li>
+					<li>drillup ： 图表上钻事件</li>
+					<li>redraw ：图表重绘事件</li>
+					<li>selection ： 图表范围选择事件</li>
+					<li>beforePrint ： 图表打印前事件</li>
+					<li>afterPrint ： 图表打印后事件</li>
+				</ul>
+			</section>
+			<section>
+				<h3>其他配置</h3>
+				<ul>
+					<li>图表类型:通过 chart.type 来指定图表类型，表示如果默认图表类型，即如果 series 中没有指定 type， 那么图表的类型就由该属性来确定。highcharts 支持的所有图表类型见 plotOptions。</li>
+					<li>、图表缩放,图表缩放包括缩放（zoom）和平移（pan），对应的属性有：
+						<ol>
+							<li>zoomType ： 缩放类型，值可以是 “x”、“y”、“xy”，分别表示水平缩放、竖直缩放、平面缩放</li>
+							<li>缩放恢复按钮：可以指定按钮的样式、位置等，见 resetZoomButton，按钮的文字可以通过 lang 中的属性来指定</li>
+							<li>selectionMarkerFill ：选中背景色</li>
+							<li>panKey：平移键，默认是 “Shift”，即在启用平移后，按住指定的按键即可对图表进行平移操作，</li>
+							<li>panning ： 是否启用平移，启用平移后，按住平移键，然后就可以用鼠标对图表进行平移操作（即平移操作是平移键加鼠标拖动）</li>
+						</ol>
+					</li>
+					<li>3D 属性:Highcharts 4.0 开始支持 3D 图表类型，目前支持 3D 柱形图、3D 饼图、3D 散点图。</li>
+					<li>图表反转 ： 图表反转指的是将图表的 x轴和 y轴进行对调操作，对应的只需要设置 chart.inverted = true 即可。</li>
+					<li>图表动画 ：chart.animation 可以设置图表的全局动画效果，这里的动画指的是图表更新时的动画效果，而图表初始化的动画是在 plotOptions.series.animation 中启用和关闭的。</li>
+					<li>图表自适应 ：前面说过通过设置图表容器的 min-width 可以让图表自适应，这个开关对应的属性是 chart.reflow，另外，还可以通过 API 接口 Chart.reflow 在外部对图表进行自适应操作，</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

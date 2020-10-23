@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+		<link rel="stylesheet" href="./index.css">
+		<style>
+			@media (max-width:450px) {
+				main{
+					width:auto;
+					height:auto;
+					padding:0;
+					margin:0;
+				}
+			}
+		</style>
+		<title>坐标轴</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h3>坐标轴</h3>
+				<ul>
+					<li>笛卡尔图表（普通的二维数据图）都有X轴和Y轴。默认情况下X轴显示在图表的底部，Y轴显示在左侧（多个Y轴时可以显示在左右两侧），通过设置chart.inverted=true 可以让X,Y轴显示位置对调</li>
+				</ul>
+			</section>
+			<section>
+				<h3>坐标轴组成部分</h3>
+				<ul>
+					<li>坐标轴标题，默认情况下，X轴为null，Y轴为'Value'。xAxis:{title:{text:'x轴标题'}}，yAxis:{title:{text:'y轴标题'}}</li>
+					<li>坐标轴刻度标签（Labels）</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

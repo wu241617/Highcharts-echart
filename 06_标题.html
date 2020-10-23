@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,mximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+		<link rel="stylesheet" href="./index.css">
+		<style>
+			@media (max-width:450px){
+				main{
+					width:auto;
+					height:auto;
+					padding:0;
+					margin:0;
+				}
+			}
+		</style>
+		<title>标题</title>
+	</head>
+	<body>
+		<main>
+		<section>
+			<h3>标题</h3>
+			<ul>
+				<li>标题默认显示在图表的顶部，包括标题和副标题（subTitle）,其中副标题是非必须的。</li>
+				<li>设置标题：title:{text:'我是标题'}</li>
+				<li>设置副标题：subtitle:{text:'我是副标题'}</li>
+			</ul>
+		</section>
+		<section>
+			<h3>标题的常用属性</h3>
+			<ul>
+				<li>text:标题的文字，默认值：chart title</li>
+				<li>align:文字水平对齐方式，有left,middle,right可选，默认为center</li>
+				<li>verticalAign:文字垂直对齐方式。有top,middle,bottom可选。默认值“”</li>
+				<li>floating:是否浮动，设置浮动后，标题将不占用图表区位置。默认false</li>
+				<li>margin:标题和图表之间的间隔，当有副标题的时候，表示标题和副标题之间的间隔。默认值15</li>
+				<li>style:文字样式，可以设置文本颜色，字体，字号。</li>
+				<li>x:相对于水平对齐的偏移量，可以是负数，默认0</li>
+				<li>y:相对于水平垂直对齐的偏移量，可以是负数，默认0</li>
+			</ul>
+		</section>
+		<section>
+			<h3>标题相关方法</h3>
+			<ul>
+				<li>获取标题内容：var title = chart.title.textStr;</li>
+				<li>设置标题内容：chart.setTitle({text:'我是新标题'})</li>
+				<li>设置副标题内容：chart.setTitle({}, {text:'我是新副标题'})</li>
+				<li>在标题中添加链接：title:{useHTML:true,text:'<a href='xxx'>正文<a/>'}</li>
+				<li>隐藏 / 不显示标题：title:null</li>
+			</ul>
+		</section>
+		</main>
+	</body>
+</html>

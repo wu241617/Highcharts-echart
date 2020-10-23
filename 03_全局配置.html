@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全局配置</title>
+	</head>
+	<body>
+		<div id="container1" style="width:600px; height:400px;"></div>
+		<div id="container2" style="width:600px; height:400px;"></div>
+		<script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+		<script>
+			// 全局配置，针对页面上所有图表有效
+			Highcharts.setOptions({
+			    chart: {
+			        backgroundColor: {
+			            linearGradient: [0, 0, 500, 500],
+			            stops: [
+			                [0, 'rgb(255, 255, 255)'],
+			                [1, 'rgb(240, 240, 255)']
+			                ]
+			        },
+			        borderWidth: 1,
+			        plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+			        plotShadow: true,
+			        plotBorderWidth: 1
+			    }
+			});
+			
+			var chart1 = Highcharts.chart('container1', {
+				credits: false,
+			    xAxis: {
+			        type: 'datetime'
+			    },
+				title: {
+					text: 'DateTime'
+				},
+			    series: [{
+			        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+			        pointStart: Date.UTC(2010, 0, 1),
+			        pointInterval: 3600 * 1000 // one hour
+			    }]
+			});
+			var chart2 = Highcharts.chart('container2', {
+			    chart: {
+			        type: 'column'
+			    },
+				title: {
+					text: 'Column'
+				},
+			    xAxis: {
+			        type: 'datetime'
+			    },
+			
+			    series: [{
+			        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+			        pointStart: Date.UTC(2010, 0, 1),
+			        pointInterval: 3600 * 1000 // one hour
+			    }]
+			});
+		</script>
+	</body>
+</html>
